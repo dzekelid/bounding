@@ -7,8 +7,8 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "7"
 x-alexaRank: "264121"
 tags: Bounding
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/bounding/master/_listings/predix/apis.md
 specificationVersion: "0.14"
 apis:
@@ -42,6 +42,41 @@ apis:
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/bounding/master/_listings/predix/v1collectionscollectionnamecluster-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/bounding/master/_listings/predix/v1collectionscollectionnamecluster-get-openapi.md
+- name: Intelligent Mapping - Return collection features in specified bounding box
+  x-api-slug: v1collectionscollectionnamespatialquerybboxinteracts-get
+  description: |-
+    Returns all features in the specified collection that exist fully or
+    partially within the specified bounding box. The bounding box is defined
+    by two coordinates in the EPSG:4326 (WGS84) (for further details see
+    http://epsg.io/4326):
+
+    * left (longitude), bottom (latitude)
+
+    * right (longitude), top (latitude)
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////
+  tags: SaaS, Technology, Enterprise, Internet of Things, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/bounding/master/_listings/predix/v1collectionscollectionnamespatialquerybboxinteracts-get-openapi.md
+- name: Intelligent Mapping - Returns clustering data for collection features in specified
+    bounding box
+  x-api-slug: v1collectionscollectionnamecluster-get
+  description: |-
+    Returns Clustering data for the specified collection that exist fully
+     or partially within the specified bounding box. The bounding box is
+     defined by two coordinates in the EPSG:4326 (WGS84)
+     (for further details see http://epsg.io/4326):
+     * left (longitude), bottom (latitude)
+     * right (longitude), top (latitude)
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png
+  humanURL: https://www.predix.io
+  baseURL: https:////
+  tags: SaaS, Technology, Enterprise, Internet of Things, Relative Data, Service API
+  properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/bounding/master/_listings/predix/v1collectionscollectionnamecluster-get-openapi.md
 x-common:

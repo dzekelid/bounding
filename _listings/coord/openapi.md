@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: Coord
 x-complete: 1
@@ -14,4 +13,53 @@ produces:
 - application/json
 consumes:
 - application/json
----
+paths:
+  /bybounds/all_rules:
+    get:
+      summary: Find the rules for all curbs within a bounding box.
+      description: Find the rules for all curbs within a bounding box..
+      operationId: get_by_bounds
+      x-api-path-slug: byboundsall-rules-get
+      parameters:
+      - in: query
+        name: access_key
+        description: The API access key for the request
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Find
+      - Rules
+      - Curbs
+      - Within
+      - Bounding
+      - Box
+  /bybounds/time_rules:
+    get:
+      summary: Find the rules for all curbs within a bounding box at a particular
+        time.
+      description: Find the rules for all curbs within a bounding box at a particular
+        time..
+      operationId: get_at_time_by_bounds
+      x-api-path-slug: byboundstime-rules-get
+      parameters:
+      - in: query
+        name: access_key
+        description: The API access key for the request
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Find
+      - Rules
+      - Curbs
+      - Within
+      - Bounding
+      - Box
+      - At
+      - Particular
+      - Time

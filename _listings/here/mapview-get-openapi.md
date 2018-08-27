@@ -29,6 +29,47 @@ produces:
 consumes:
 - application/json
 paths:
+  /bbox:
+    get:
+      summary: Find Locations within a Bounding Box
+      description: |-
+        *Request a list of user-defined locations within a defined area*
+
+        The request uses the `bbox` endpoint, and the bounding box is specified by adding the `bbox` parameter to the request URL.
+
+
+
+        * **layerId**  `text`
+         \- Unique indicator used to retrieve a dataset
+
+        * **bbox**  `bbox`
+         \- Restricts results to be found within this bounding box
+
+        * **app_id**  `text`
+         \- A 20 byte Base64 URL-safe encoded string used for the authentication of the client application.    You must include an `app_id` with every request.
+
+        * **app_code**  `text`
+         \- A 20 byte Base64 URL-safe encoded string used for the authentication of the client application.    You must include an `app_code` with every request.
+      operationId: BboxGet2
+      x-api-path-slug: bbox-get
+      parameters:
+      - in: query
+        name: app_code
+      - in: query
+        name: app_id
+      - in: query
+        name: bbox
+      - in: query
+        name: layerId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Find
+      - Locations
+      - Within
+      - Bounding
+      - Box
   /mapview:
     get:
       summary: Map Image using Bounding Box

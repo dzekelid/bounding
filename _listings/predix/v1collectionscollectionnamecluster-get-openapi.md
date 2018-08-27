@@ -3,11 +3,17 @@ swagger: "2.0"
 x-collection-name: Predix
 x-complete: 0
 info:
-  title: Predix Dynamic Mapping Returns clustered assets in a specified bounding box
+  title: Predix Intelligent Mapping Returns clustering data for collection features
+    in specified bounding box
   description: |-
-    Returns clusters of assets in the specified collection whose latest location exists within the specified
-    bounding box. The clusters can also optionally be filtered by a single key-value pair.
+    Returns Clustering data for the specified collection that exist fully
+     or partially within the specified bounding box. The bounding box is
+     defined by two coordinates in the EPSG:4326 (WGS84)
+     (for further details see http://epsg.io/4326):
+     * left (longitude), bottom (latitude)
+     * right (longitude), top (latitude)
   version: 1.0.0
+host: insights-api.data-services.predix.io
 basePath: /
 schemes:
 - http
@@ -18,48 +24,56 @@ consumes:
 paths:
   /v1/collections/{collectionName}/spatial-query/bbox-interacts:
     get:
-      summary: Returns collection assets in specified bounding box
+      summary: Return collection features in specified bounding box
       description: |-
-        Returns all assets in the specified collection whose latest location exist within the specified bounding box.
-        The bounding box is defined by two coordinates in the EPSG:4326 (WGS84) (for further details see
+        Returns all features in the specified collection that exist fully or
+        partially within the specified bounding box. The bounding box is defined
+        by two coordinates in the EPSG:4326 (WGS84) (for further details see
         http://epsg.io/4326):
+
         * left (longitude), bottom (latitude)
+
         * right (longitude), top (latitude)
-        The results can be filtered by including key and value pairs to match in location meta data.
-      operationId: returns-all-assets-in-the-specified-collection-whose-latest-location-exist-within-the-specified-boun
+      operationId: returns-all-features-in-the-specified-collection-that-exist-fully-orpartially-within-the-specified-b
       x-api-path-slug: v1collectionscollectionnamespatialquerybboxinteracts-get
       parameters:
       - in: query
         name: No Name
       responses:
         200:
-          description: Successful response
+          description: OK
       tags:
-      - Returns
+      - Return
       - Collection
-      - Assets
+      - Features
       - In
       - Specified
       - Bounding
       - Box
   /v1/collections/{collectionName}/cluster:
     get:
-      summary: Returns clustered assets in a specified bounding box
+      summary: Returns clustering data for collection features in specified bounding
+        box
       description: |-
-        Returns clusters of assets in the specified collection whose latest location exists within the specified
-        bounding box. The clusters can also optionally be filtered by a single key-value pair.
-      operationId: returns-clusters-of-assets-in-the-specified-collection-whose-latest-location-exists-within-the-speci
+        Returns Clustering data for the specified collection that exist fully
+         or partially within the specified bounding box. The bounding box is
+         defined by two coordinates in the EPSG:4326 (WGS84)
+         (for further details see http://epsg.io/4326):
+         * left (longitude), bottom (latitude)
+         * right (longitude), top (latitude)
+      operationId: returns-clustering-data-for-the-specified-collection-that-exist-fully-or-partially-within-the-specif
       x-api-path-slug: v1collectionscollectionnamecluster-get
       parameters:
       - in: query
         name: No Name
       responses:
         200:
-          description: Successful response
+          description: OK
       tags:
       - Returns
-      - Clustered
-      - Assets
+      - Clustering
+      - Datacollection
+      - Features
       - In
       - Specified
       - Bounding
